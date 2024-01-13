@@ -7,7 +7,7 @@ import 'package:tdd/src/Features/members/domain/entities/member_entity.dart';
 import '../../../../../helpers/json_reader.dart';
 
 void main() {
-  var testMemberModel = MembersModel(
+  var testMemberModel = MemberModel(
       id: 1,
       name: "John snow",
       position: "Principal Engineer",
@@ -15,13 +15,13 @@ void main() {
       updatedAt: "2023-12-19T10:07:17.000000Z");
 
   var listmemBersModel = [
-    MembersModel(
+    MemberModel(
         id: 1,
         name: "name",
         position: "position",
         createdAt: "createdAt",
         updatedAt: "updatedAt"),
-    MembersModel(
+    MemberModel(
         id: 1,
         name: "name",
         position: "position",
@@ -40,7 +40,7 @@ void main() {
         json.decode(readJson('helpers/dummy_data/members_response.json'));
 
     //act
-    final result = MembersModel.fromJson(jsonMap);
+    final result = MemberModel.fromJson(jsonMap);
 
     //essert
     expect(result, testMemberModel);

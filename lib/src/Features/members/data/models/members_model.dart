@@ -1,7 +1,7 @@
 import 'package:tdd/src/Features/members/domain/entities/member_entity.dart';
 
-class MembersModel extends MemberEntity {
-  MembersModel(
+class MemberModel extends MemberEntity {
+  MemberModel(
       {required int id,
       required String name,
       required String position,
@@ -14,7 +14,7 @@ class MembersModel extends MemberEntity {
             createdAt: createdAt,
             updatedAt: updatedAt);
 
-  factory MembersModel.fromJson(Map<String, dynamic> json) => MembersModel(
+  factory MemberModel.fromJson(Map<String, dynamic> json) => MemberModel(
       id: json['id'],
       name: json['name'],
       position: json['position'],
