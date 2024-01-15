@@ -21,7 +21,7 @@ class MemberRemoteDataSourceImpl extends MemberRemoteDataSource {
     if (response.statusCode == 200) {
       return MemberModel.fromJson(json.decode(response.data));
     } else {
-      throw ServerException(message: 'something Went Wrong', statusCode: "500");
+      throw ServerException(message: 'Something Went Wrong', statusCode: 404);
     }
   }
 }

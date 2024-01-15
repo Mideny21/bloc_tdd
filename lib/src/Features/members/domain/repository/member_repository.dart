@@ -4,4 +4,5 @@ import 'package:tdd/src/core/errors/failure.dart';
 
 abstract class MemberRepository {
   Future<Either<Failure, List<MemberEntity>>> getAllMembers();
+  Future<Either<Failure, MemberEntity>> getMember(int id);
 }

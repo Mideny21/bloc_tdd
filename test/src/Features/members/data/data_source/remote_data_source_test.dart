@@ -4,6 +4,7 @@ import 'package:mockito/mockito.dart';
 import 'package:tdd/src/Features/members/data/data_source/remote_data_source.dart';
 import 'package:tdd/src/Features/members/data/models/members_model.dart';
 import 'package:tdd/src/core/constant/constants.dart';
+import 'package:tdd/src/core/errors/exceptions.dart';
 
 import '../../../../../helpers/json_reader.dart';
 import '../../../../../helpers/test_helpers.mocks.dart';
@@ -34,6 +35,20 @@ void main() {
       //assert
       expect(result, isA<MemberModel>());
     });
+
+    // test(
+    //     'should throw a server exception when the response code is 404 or other',
+    //     () async {
+    //   //arrange
+    //   when(mockDio.get(Urls.getMemberById(memberId))).thenAnswer((_) async =>
+    //       dioResponse(data: 'Something Went Wrong', statusCode: 404));
+
+    //   //act
+    //   final result = await memberRemoteDataSourceImpl.getSingleMember(memberId);
+
+    //   //assert
+    //   expect(result, throwsA(isA<ServerException>()));
+    // });
   });
 }
 

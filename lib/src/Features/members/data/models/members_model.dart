@@ -20,4 +20,11 @@ class MemberModel extends MemberEntity {
       position: json['position'],
       createdAt: json['created_at'],
       updatedAt: json['updated_at']);
+
+  MemberEntity toEntity() => MemberEntity(
+      id: id,
+      name: name,
+      position: position,
+      createdAt: createdAt,
+      updatedAt: updatedAt);
 }
