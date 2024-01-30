@@ -22,6 +22,8 @@ import 'package:tdd/src/Features/members/domain/entities/member_entity.dart'
     as _i12;
 import 'package:tdd/src/Features/members/domain/repository/member_repository.dart'
     as _i9;
+import 'package:tdd/src/Features/members/domain/usecases/get_member.dart'
+    as _i16;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -105,6 +107,17 @@ class _FakeMemberModel_6 extends _i1.SmartFake implements _i8.MemberModel {
         );
 }
 
+class _FakeMemberRepository_7 extends _i1.SmartFake
+    implements _i9.MemberRepository {
+  _FakeMemberRepository_7(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
 /// A class which mocks [MemberRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
@@ -130,6 +143,24 @@ class MockMemberRepository extends _i1.Mock implements _i9.MemberRepository {
               ),
             )),
           ) as _i10.Future<_i2.Either<_i11.Failure, List<_i12.MemberEntity>>>);
+
+  @override
+  _i10.Future<_i2.Either<_i11.Failure, _i12.MemberEntity>> getMember(int? id) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #getMember,
+          [id],
+        ),
+        returnValue:
+            _i10.Future<_i2.Either<_i11.Failure, _i12.MemberEntity>>.value(
+                _FakeEither_0<_i11.Failure, _i12.MemberEntity>(
+          this,
+          Invocation.method(
+            #getMember,
+            [id],
+          ),
+        )),
+      ) as _i10.Future<_i2.Either<_i11.Failure, _i12.MemberEntity>>);
 }
 
 /// A class which mocks [Dio].
@@ -862,4 +893,40 @@ class MockMemberRemoteDataSource extends _i1.Mock
           ),
         )),
       ) as _i10.Future<_i8.MemberModel>);
+}
+
+/// A class which mocks [GetMemberUseCase].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockGetMemberUseCase extends _i1.Mock implements _i16.GetMemberUseCase {
+  MockGetMemberUseCase() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i9.MemberRepository get memberRepository => (super.noSuchMethod(
+        Invocation.getter(#memberRepository),
+        returnValue: _FakeMemberRepository_7(
+          this,
+          Invocation.getter(#memberRepository),
+        ),
+      ) as _i9.MemberRepository);
+
+  @override
+  _i10.Future<_i2.Either<_i11.Failure, _i12.MemberEntity>> execute(int? id) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #execute,
+          [id],
+        ),
+        returnValue:
+            _i10.Future<_i2.Either<_i11.Failure, _i12.MemberEntity>>.value(
+                _FakeEither_0<_i11.Failure, _i12.MemberEntity>(
+          this,
+          Invocation.method(
+            #execute,
+            [id],
+          ),
+        )),
+      ) as _i10.Future<_i2.Either<_i11.Failure, _i12.MemberEntity>>);
 }
