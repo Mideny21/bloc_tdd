@@ -17,6 +17,12 @@ class MemberPage extends StatelessWidget {
             BlocProvider.of<MemberBloc>(context).add(GetMember(2));
           },
         ),
+        TextButton(
+            key: Key('member_button'),
+            onPressed: () {
+              BlocProvider.of<MemberBloc>(context).add(GetMember(2));
+            },
+            child: Text('refresh')),
         BlocBuilder<MemberBloc, MemberState>(
           builder: (context, state) {
             if (state is MemberLoading) {
