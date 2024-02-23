@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:tdd/src/Features/members/data/models/members_model.dart';
-import 'package:tdd/src/Features/members/data/repositories/member_repository_impl.dart';
-import 'package:tdd/src/Features/members/domain/entities/member_entity.dart';
+import 'package:tdd/src/Features/members/data/models/customer_model.dart';
+import 'package:tdd/src/Features/members/data/repositories/customer_repository_impl.dart';
+import 'package:tdd/src/Features/members/domain/entities/customer_entity.dart';
 
 import '../../../../../helpers/test_helpers.mocks.dart';
 

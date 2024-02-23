@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:tdd/src/Features/members/domain/entities/member_entity.dart';
-import 'package:tdd/src/Features/members/domain/usecases/get_all_members.dart';
+import 'package:tdd/src/Features/members/domain/entities/customer_entity.dart';
+import 'package:tdd/src/Features/members/domain/usecases/get_all_customer.dart';
 
 import '../../../../../helpers/test_helpers.mocks.dart';
 

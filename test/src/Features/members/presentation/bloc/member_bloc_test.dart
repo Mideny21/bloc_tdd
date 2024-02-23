@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:tdd/src/Features/members/domain/entities/member_entity.dart';
+import 'package:tdd/src/Features/members/domain/entities/customer_entity.dart';
 import 'package:tdd/src/Features/members/presentation/bloc/member_bloc.dart';
 import 'package:bloc_test/bloc_test.dart';
 

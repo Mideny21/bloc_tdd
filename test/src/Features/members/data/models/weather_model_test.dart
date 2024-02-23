@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:tdd/src/Features/members/data/models/members_model.dart';
-import 'package:tdd/src/Features/members/domain/entities/member_entity.dart';
+import 'package:tdd/src/Features/members/data/models/customer_model.dart';
+import 'package:tdd/src/Features/members/domain/entities/customer_entity.dart';
 
 import '../../../../../helpers/json_reader.dart';
 

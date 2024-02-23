@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:tdd/src/Features/members/domain/entities/member_entity.dart';
+import 'package:tdd/src/Features/members/domain/entities/customer_entity.dart';
 import 'package:tdd/src/Features/members/domain/usecases/get_member.dart';
 
 part 'member_event.dart';

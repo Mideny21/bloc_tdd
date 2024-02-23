@@ -15,12 +15,13 @@ import 'package:dio/src/response.dart' as _i7;
 import 'package:dio/src/transformer.dart' as _i5;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:tdd/src/core/errors/failure.dart' as _i11;
-import 'package:tdd/src/Features/members/data/data_source/remote_data_source.dart'
+import 'package:tdd/src/Features/members/data/data_source/customer_remote_source.dart'
     as _i15;
-import 'package:tdd/src/Features/members/data/models/members_model.dart' as _i8;
-import 'package:tdd/src/Features/members/domain/entities/member_entity.dart'
+import 'package:tdd/src/Features/members/data/models/customer_model.dart'
+    as _i8;
+import 'package:tdd/src/Features/members/domain/entities/customer_entity.dart'
     as _i12;
-import 'package:tdd/src/Features/members/domain/repository/member_repository.dart'
+import 'package:tdd/src/Features/members/domain/repository/customer_repository.dart'
     as _i9;
 import 'package:tdd/src/Features/members/domain/usecases/get_member.dart'
     as _i16;
