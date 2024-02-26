@@ -5,16 +5,23 @@ import 'package:tdd/src/Features/members/data/repositories/customer_repository_i
 import 'package:tdd/src/Features/members/domain/repository/customer_repository.dart';
 import 'package:tdd/src/Features/members/domain/usecases/get_all_customer.dart';
 import 'package:tdd/src/Features/members/domain/usecases/get_member.dart';
+import 'package:tdd/src/Features/members/presentation/bloc/customer_bloc.dart';
 import 'package:tdd/src/Features/members/presentation/bloc/member_bloc.dart';
+import 'package:tdd/src/core/network/api.dart';
+import 'package:tdd/src/core/network/logger.dart';
+import 'package:tdd/src/core/network/network_logger.dart';
 
 final locator = GetIt.instance;
 
-void setupLocator() {
+Future<void> setupLocator() async {
+  locator.registerSingleton(SimpleLogPrinter());
+
   //bloc
-  locator.registerFactory(() => MemberBloc(locator()));
+  locator.registerFactory(() => CustomerBloc(getAllCustomerUseCase: locator()));
 
   //usecase
-  locator.registerLazySingleton(() => GetAllCustomerUseCase(locator()));
+  locator.registerLazySingleton<GetAllCustomerUseCase>(
+      () => GetAllCustomerUseCase(customerRepository: locator()));
 
   //repository
   locator.registerLazySingleton<CustomerRepository>(
@@ -25,5 +32,7 @@ void setupLocator() {
       () => CustomerRemoteDataSourceImpl(api: locator()));
 
   //external
-  locator.registerLazySingleton(() => Dio());
+  locator.registerLazySingleton<Dio>(() => Dio());
+  locator.registerLazySingleton<ApiService>(() => ApiService());
+  locator.registerSingleton(Logging());
 }

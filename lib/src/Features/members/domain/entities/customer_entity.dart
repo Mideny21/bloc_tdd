@@ -5,8 +5,8 @@ class CustomerEntity extends Equatable {
   int? id;
   String? username;
   String? email;
-  String? first_name;
-  String? last_name;
+  String? firstName;
+  String? lastName;
   String? address;
   String? phone_number;
   String? created_at;
@@ -15,8 +15,8 @@ class CustomerEntity extends Equatable {
       {this.id,
       this.username,
       this.email,
-      this.first_name,
-      this.last_name,
+      this.firstName,
+      this.lastName,
       this.address,
       this.phone_number,
       this.created_at,
@@ -24,15 +24,5 @@ class CustomerEntity extends Equatable {
 
   @override
   // TODO: implement props
-  List<Object?> get props => [
-        id,
-        username,
-        email,
-        first_name,
-        last_name,
-        address,
-        phone_number,
-        created_at,
-        updated_at
-      ];
+  List<Object?> get props => [id];
 }

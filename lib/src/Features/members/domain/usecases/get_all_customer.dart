@@ -10,7 +10,7 @@ import 'package:tdd/src/core/utils/typedefs.dart';
 class GetAllCustomerUseCase
     implements UsecaseWithoutParams<List<CustomerEntity>> {
   final CustomerRepository customerRepository;
-  GetAllCustomerUseCase(this.customerRepository);
+  GetAllCustomerUseCase({required this.customerRepository});
 
   @override
   ResultFuture<List<CustomerEntity>> call() {

@@ -17,11 +17,11 @@ class ApiService {
       },
     );
 
-    String url = 'url/';
+    String url = 'http://192.168.8.9:8000';
 
-    dio.options.baseUrl = "${url}api/v1/";
+    dio.options.baseUrl = "$url/api/";
     dio.options.connectTimeout = const Duration(seconds: 60);
-    //  dio.options.receiveTimeout = Duration(seconds: 3);
+    dio.options.receiveTimeout = const Duration(seconds: 60);
     dio.interceptors.add(Logging());
 
     return dio;
