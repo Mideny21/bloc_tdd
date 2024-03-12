@@ -2,8 +2,8 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
+import 'package:tdd/src/Features/customer/data/models/customer_model.dart';
 
-import 'package:tdd/src/Features/members/data/models/customer_model.dart';
 import 'package:tdd/src/core/constant/constants.dart';
 import 'package:tdd/src/core/errors/exceptions.dart';
 import 'package:tdd/src/core/network/api.dart';

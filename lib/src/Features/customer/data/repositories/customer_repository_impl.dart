@@ -2,11 +2,10 @@
 import 'dart:io';
 
 import 'package:dartz/dartz.dart';
+import 'package:tdd/src/Features/customer/data/data_source/customer_remote_source.dart';
+import 'package:tdd/src/Features/customer/data/models/customer_model.dart';
+import 'package:tdd/src/Features/customer/domain/repository/customer_repository.dart';
 
-import 'package:tdd/src/Features/members/data/data_source/customer_remote_source.dart';
-import 'package:tdd/src/Features/members/data/models/customer_model.dart';
-import 'package:tdd/src/Features/members/domain/entities/customer_entity.dart';
-import 'package:tdd/src/Features/members/domain/repository/customer_repository.dart';
 import 'package:tdd/src/core/errors/exceptions.dart';
 import 'package:tdd/src/core/errors/failure.dart';
 

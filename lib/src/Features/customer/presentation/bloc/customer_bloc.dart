@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:tdd/src/Features/members/domain/entities/customer_entity.dart';
-import 'package:tdd/src/Features/members/domain/usecases/get_all_customer.dart';
+import 'package:tdd/src/Features/customer/domain/entities/customer_entity.dart';
+import 'package:tdd/src/Features/customer/domain/usecases/get_all_customer.dart';
 import 'package:tdd/src/core/network/logger.dart';
 
 part 'customer_event.dart';

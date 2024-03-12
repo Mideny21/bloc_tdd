@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tdd/src/Features/members/presentation/bloc/customer_bloc.dart';
-import 'package:tdd/src/Features/members/presentation/bloc/member_bloc.dart';
-import 'package:tdd/src/Features/members/presentation/pages/member_page.dart';
+import 'package:tdd/src/Features/customer/presentation/bloc/customer_bloc.dart';
+import 'package:tdd/src/Features/customer/presentation/pages/customer_page.dart';
 import 'package:tdd/src/core/injection_container.dart';
 
 void main() async {
@@ -21,8 +20,8 @@ class MyApp extends StatelessWidget {
         BlocProvider<CustomerBloc>(create: (_) => locator<CustomerBloc>()),
       ],
       child: MaterialApp(
-        title: 'Member TDD',
-        home: MemberPage(),
+        title: 'CUSTOMER TDD',
+        home: CustomerPage(),
       ),
     );
   }

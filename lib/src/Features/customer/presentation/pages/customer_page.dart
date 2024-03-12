@@ -3,21 +3,21 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tdd/src/Features/members/domain/entities/customer_entity.dart';
-import 'package:tdd/src/Features/members/presentation/bloc/customer_bloc.dart';
-import 'package:tdd/src/Features/members/presentation/bloc/member_bloc.dart';
+import 'package:tdd/src/Features/customer/domain/entities/customer_entity.dart';
+import 'package:tdd/src/Features/customer/presentation/bloc/customer_bloc.dart';
+
 import 'package:tdd/src/core/constant/constants.dart';
 import 'package:tdd/src/core/network/api.dart';
 import 'package:tdd/src/core/network/logger.dart';
 
-class MemberPage extends StatefulWidget {
-  const MemberPage({super.key});
+class CustomerPage extends StatefulWidget {
+  const CustomerPage({super.key});
 
   @override
-  State<MemberPage> createState() => _MemberPageState();
+  State<CustomerPage> createState() => _CustomerPageState();
 }
 
-class _MemberPageState extends State<MemberPage> {
+class _CustomerPageState extends State<CustomerPage> {
   @override
   void initState() {
     // TODO: implement initState

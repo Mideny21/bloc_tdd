@@ -1,12 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
-import 'package:tdd/src/Features/members/data/data_source/customer_remote_source.dart';
-import 'package:tdd/src/Features/members/data/repositories/customer_repository_impl.dart';
-import 'package:tdd/src/Features/members/domain/repository/customer_repository.dart';
-import 'package:tdd/src/Features/members/domain/usecases/get_all_customer.dart';
-import 'package:tdd/src/Features/members/domain/usecases/get_member.dart';
-import 'package:tdd/src/Features/members/presentation/bloc/customer_bloc.dart';
-import 'package:tdd/src/Features/members/presentation/bloc/member_bloc.dart';
+import 'package:tdd/src/Features/customer/data/data_source/customer_remote_source.dart';
+import 'package:tdd/src/Features/customer/data/repositories/customer_repository_impl.dart';
+import 'package:tdd/src/Features/customer/domain/repository/customer_repository.dart';
+import 'package:tdd/src/Features/customer/domain/usecases/get_all_customer.dart';
+import 'package:tdd/src/Features/customer/presentation/bloc/customer_bloc.dart';
+
 import 'package:tdd/src/core/network/api.dart';
 import 'package:tdd/src/core/network/logger.dart';
 import 'package:tdd/src/core/network/network_logger.dart';

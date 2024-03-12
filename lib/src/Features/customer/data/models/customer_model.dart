@@ -1,4 +1,4 @@
-import 'package:tdd/src/Features/members/domain/entities/customer_entity.dart';
+import 'package:tdd/src/Features/customer/domain/entities/customer_entity.dart';
 
 class CustomerModel extends CustomerEntity {
   int? id;
