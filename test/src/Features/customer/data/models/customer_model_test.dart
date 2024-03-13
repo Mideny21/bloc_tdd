@@ -1,6 +1,10 @@
+import 'dart:convert';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:tdd/src/Features/customer/data/models/customer_model.dart';
 import 'package:tdd/src/Features/customer/domain/entities/customer_entity.dart';
+
+import '../../../../../helpers/json_reader.dart';
 
 void main() {
   var testCustomerModel = CustomerModel(
@@ -42,5 +46,17 @@ void main() {
             .having((p0) => p0.phoneNumber, 'phoneNumber', '0678909090')
             .having((p0) => p0.createdAt, 'createdAt', '32324-342')
             .having((p0) => p0.updatedAt, 'updatedAt', '4534-590385903'));
+  });
+
+  test('should return a valid CustomerModel Fromjson from helpers', () {
+    //arrange
+    final Map<String, dynamic> jsonMap =
+        json.decode(readJson('helpers/dummy_data/customer_response.json'));
+
+    //act
+    final result = CustomerModel.fromJson(jsonMap);
+
+    //assert
+    expect(result, testCustomerModel);
   });
 }
