@@ -1,12 +1,13 @@
 import 'package:dio/dio.dart';
 import 'package:mockito/annotations.dart';
 import 'package:tdd/src/Features/customer/domain/repository/customer_repository.dart';
+import 'package:tdd/src/core/network/api.dart';
 
 @GenerateMocks(
   [
     CustomerRepository,
-
-    //Dio,
+    ApiService,
+    Dio,
     //MemberRemoteDataSource,
     //  GetMemberUseCase
   ],
