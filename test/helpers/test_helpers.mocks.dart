@@ -10,6 +10,10 @@ import 'package:dio/dio.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:tdd/src/core/errors/failure.dart' as _i6;
 import 'package:tdd/src/core/network/api.dart' as _i8;
+import 'package:tdd/src/Features/customer/data/data_source/customer_remote_source.dart'
+    as _i9;
+import 'package:tdd/src/Features/customer/data/models/customer_model.dart'
+    as _i10;
 import 'package:tdd/src/Features/customer/domain/entities/customer_entity.dart'
     as _i7;
 import 'package:tdd/src/Features/customer/domain/repository/customer_repository.dart'
@@ -854,4 +858,24 @@ class MockDio extends _i1.Mock implements _i3.Dio {
           ),
         )),
       ) as _i5.Future<_i3.Response<T>>);
+}
+
+/// A class which mocks [CustomerRemoteDataSource].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockCustomerRemoteDataSource extends _i1.Mock
+    implements _i9.CustomerRemoteDataSource {
+  MockCustomerRemoteDataSource() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i5.Future<List<_i10.CustomerModel>> getAllCustomer() => (super.noSuchMethod(
+        Invocation.method(
+          #getAllCustomer,
+          [],
+        ),
+        returnValue:
+            _i5.Future<List<_i10.CustomerModel>>.value(<_i10.CustomerModel>[]),
+      ) as _i5.Future<List<_i10.CustomerModel>>);
 }

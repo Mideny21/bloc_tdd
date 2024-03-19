@@ -33,4 +33,6 @@ class CustomerModel extends CustomerEntity {
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
   }
+
+  // CustomerEntity toEntity() => CustomerEntity();
 }

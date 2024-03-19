@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:mockito/annotations.dart';
+import 'package:tdd/src/Features/customer/data/data_source/customer_remote_source.dart';
 import 'package:tdd/src/Features/customer/domain/repository/customer_repository.dart';
 import 'package:tdd/src/core/network/api.dart';
 
@@ -8,6 +9,7 @@ import 'package:tdd/src/core/network/api.dart';
     CustomerRepository,
     ApiService,
     Dio,
+    CustomerRemoteDataSource
     //MemberRemoteDataSource,
     //  GetMemberUseCase
   ],
