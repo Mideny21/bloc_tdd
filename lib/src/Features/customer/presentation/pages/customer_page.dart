@@ -28,7 +28,12 @@ class _CustomerPageState extends State<CustomerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Customer"), centerTitle: true),
+      appBar: AppBar(
+          title: Text(
+            "Customer",
+            key: Key('customerPage'),
+          ),
+          centerTitle: true),
       body: BlocBuilder<CustomerBloc, CustomerState>(
         builder: (context, state) {
           if (state is CustomerLoading) {
@@ -36,6 +41,7 @@ class _CustomerPageState extends State<CustomerPage> {
           }
           if (state is CustomerLoaded) {
             return ListView.builder(
+                key: Key('customer_data'),
                 itemCount: state.customers.length,
                 shrinkWrap: true,
                 itemBuilder: (context, index) {

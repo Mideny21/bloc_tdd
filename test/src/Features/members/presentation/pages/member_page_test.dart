@@ -69,3 +69,31 @@ void main() {
     expect(find.byKey(const Key('member_data')), findsOneWidget);
   });
 }
+
+
+
+ group('Business List Page', () {
+    late MockSupplierInvoiceCubit mockBusinessCubit;
+    setUp(() {
+      mockBusinessCubit = MockSupplierInvoiceCubit();
+      when(() => mockBusinessCubit.callAllInvoiceReport())
+          .thenAnswer((invocation) => Future.value(any));
+    });
+
+    group('Should be displayed in ViewState', () {
+      testWidgets(
+          'Get the key "Invoice-Report-Loading" when cubit emit InvoiceReportsLoading',
+          (tester) async {
+        when(() => mockBusinessCubit.state).thenReturn(InvoiceReportsLoading());
+        await tester.pumpWidget(BlocProvider<SupplierInvoiceCubit>(
+          create: (context) => mockBusinessCubit,
+          child: MaterialApp(home: CompanyScreen()),
+        ));
+
+        await tester.pump();
+        final businessListLoading = find.byKey(invoiceReportLoading);
+
+        expect(businessListLoading, findsOneWidget);
+      });
+    });
+  });

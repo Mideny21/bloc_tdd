@@ -18,6 +18,8 @@ import 'package:tdd/src/Features/customer/domain/entities/customer_entity.dart'
     as _i7;
 import 'package:tdd/src/Features/customer/domain/repository/customer_repository.dart'
     as _i4;
+import 'package:tdd/src/Features/customer/domain/usecases/get_all_customer.dart'
+    as _i11;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -93,6 +95,17 @@ class _FakeInterceptors_5 extends _i1.SmartFake implements _i3.Interceptors {
 
 class _FakeResponse_6<T1> extends _i1.SmartFake implements _i3.Response<T1> {
   _FakeResponse_6(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
+class _FakeCustomerRepository_7 extends _i1.SmartFake
+    implements _i4.CustomerRepository {
+  _FakeCustomerRepository_7(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -878,4 +891,41 @@ class MockCustomerRemoteDataSource extends _i1.Mock
         returnValue:
             _i5.Future<List<_i10.CustomerModel>>.value(<_i10.CustomerModel>[]),
       ) as _i5.Future<List<_i10.CustomerModel>>);
+}
+
+/// A class which mocks [GetAllCustomerUseCase].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockGetAllCustomerUseCase extends _i1.Mock
+    implements _i11.GetAllCustomerUseCase {
+  MockGetAllCustomerUseCase() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i4.CustomerRepository get customerRepository => (super.noSuchMethod(
+        Invocation.getter(#customerRepository),
+        returnValue: _FakeCustomerRepository_7(
+          this,
+          Invocation.getter(#customerRepository),
+        ),
+      ) as _i4.CustomerRepository);
+
+  @override
+  _i5.Future<_i2.Either<_i6.Failure, List<_i7.CustomerEntity>>> call() =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [],
+        ),
+        returnValue:
+            _i5.Future<_i2.Either<_i6.Failure, List<_i7.CustomerEntity>>>.value(
+                _FakeEither_0<_i6.Failure, List<_i7.CustomerEntity>>(
+          this,
+          Invocation.method(
+            #call,
+            [],
+          ),
+        )),
+      ) as _i5.Future<_i2.Either<_i6.Failure, List<_i7.CustomerEntity>>>);
 }
